@@ -1,4 +1,4 @@
-/* resource "aws_s3_bucket" "datalake" {
+resource "aws_s3_bucket" "datalake" {
   bucket = "datalake-igti-edc-kass-tf"
 
   tags = {
@@ -20,4 +20,4 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "datalake" {
       sse_algorithm = "AES256"
     }
   }
-} */
+}
