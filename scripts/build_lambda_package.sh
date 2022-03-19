@@ -18,7 +18,7 @@ else
 fi
 
 # Declara variável que localiza o requirements com as dependências do projeto
-FILE_REQUIREMENTS=../etl/lambda_requirements.txt
+FILE_REQUIREMENTS=../../etl/lambda_requirements.txt
 
 # Verifica se o arquivo lambda_requirements existe
 if [ -f $FILE_REQUIREMENTS ]
@@ -33,7 +33,7 @@ fi
 cd $PACKAGE
 
 # Declara variável que localiza a função lambda para reutilização no código.
-LAMBDA_FUNCTION=../etl/lambda_function.py
+LAMBDA_FUNCTION=../../../etl/lambda_function.py
 
 # Verifica se o arquivo lambda_function.py existe
 if [ -f $LAMBDA_FUNCTION ]
@@ -42,7 +42,7 @@ then
     echo "Copiando função Handler..."
     cp $LAMBDA_FUNCTION .
     echo "Compactando arquivo lambda_function_payload.zip"
-    zip -r9 ../lambda_function_payload.zip . #Compacta o pacote para o deploy
+    zip -r9 ../../lambda_function_payload.zip . #Compacta o pacote para o deploy
     echo "Arquivo compactado com sucesso!"
     echo "==============================================="
 fi
